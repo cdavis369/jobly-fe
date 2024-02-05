@@ -1,0 +1,16 @@
+.new-user-home-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.new-user-home-buttons button {
+  background-color: #299306;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease-in-out;
+  text-align: center;
+  width: 25%;
+}

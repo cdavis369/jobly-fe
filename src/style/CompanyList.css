@@ -1,0 +1,15 @@
+.company-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.company-list a {
+  text-decoration: none;
+  color: black;
+}
+
+.company-list a:visited {
+  text-decoration: none;
+  color: black;
+}
