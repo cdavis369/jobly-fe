@@ -15,7 +15,8 @@ function Login() {
     if (!username || !password) {
       alert("Username and password required");
     } else {
-      const data = {username: username, password: password}
+      const data = {username: username, password: password};
+      console.log(data);
       let response = await JoblyApi.login(data);
       if (response.token) {
         setUsername(username);
