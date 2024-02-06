@@ -60,7 +60,11 @@ function UserProfile() {
           <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
         </label>
         <label>
-          Password:
+          Old Password:
+          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+        </label>
+        <label>
+          New Password:
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </label>
         <button type="submit">Edit</button>
