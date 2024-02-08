@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = process.env.REACT_APP_BASE_URL || "postgres://alodeupa:ONJASkzLCwp4tiP81igVwIuG9j07s-zF@kashin.db.elephantsql.com/alodeupa";
+const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:3001";
 
 /** API Class.
  *
@@ -28,6 +28,7 @@ class JoblyApi {
     try {
       return (await axios({ url, method, data, params, headers })).data;
     } catch (err) {
+      console.log(err);
       console.error("API Error:", err.response);
       let message = err.response.data.error.message;
       throw Array.isArray(message) ? message : [message];
@@ -62,7 +63,7 @@ class JoblyApi {
 
   static async login(user) {
     console.log("API USER: ", user)
-    let res = await this.request(`auth/token`, JSON.stringify(user), "post")
+    let res = await this.request(`auth/token`, user, "post")
     return res;
   }
 
